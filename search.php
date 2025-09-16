@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<section class="page-content search-results">
+<section class="page--content search--results">
     <div class="container">
         <h1>Search Results for "<?php echo sanitize_text_field($s); ?>"</h1>
 
         <?php if (have_posts()) { ?>
-            <ul class="search-results">
+            <ul class="search--results">
 
                 <?php while (have_posts()) : the_post(); ?>
 
