@@ -15,7 +15,17 @@
     <!-- Header -->
     <header class="navbar">
         <div>
-            <a class="navbar__logo" href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="<?php bloginfo('title'); ?>"></a>
+            <a class="navbar__logo" href="<?php bloginfo('url'); ?>">
+                <?php
+                $custom_logo_id = get_theme_mod('custom_logo');
+                $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                if (has_custom_logo()) {
+                    echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+                } else {
+                    echo '<h1>' . get_bloginfo('name') . '</h1>';
+                }
+                ?>
+            </a>
 
             <button class="navbar__mobile-menu">
                 <i class="fas fa-bars"></i>
