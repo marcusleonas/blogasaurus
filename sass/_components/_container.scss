@@ -1,37 +1,39 @@
-.container {
-  --container-max: 72rem;
-  --container-pad: 1rem;
-  --container-pad-lg: 2rem;
+@use "../variables";
 
+.container {
   width: 100%;
-  max-width: calc(var(--container-max) + 2 * var(--container-pad));
+  max-width: calc(
+    var(variables.$container-max) + 2 * var(variables.$container-pad)
+  );
   margin-inline: auto;
-  padding-inline: var(--container-pad);
+  padding-inline: var(variables.$container-pad);
 }
 
 @media (min-width: 768px) {
   .container {
-    padding-inline: var(--container-pad-lg);
-    max-width: calc(var(--container-max) + 2 * var(--container-pad-lg));
+    padding-inline: var(variables.$container-pad-lg);
+    max-width: calc(
+      var(variables.$container-max) + 2 * var(variables.$container-pad-lg)
+    );
   }
 }
 
 /* Variants */
 .container--narrow {
-  --container-max: 48rem;
+  $container-max: 48rem;
 }
 .container--wide {
-  --container-max: 84rem;
+  $container-max: 84rem;
 }
 .container--full {
   max-width: none;
 }
 
 .bleed-inline {
-  margin-inline: calc(-1 * var(--container-pad));
+  margin-inline: calc(-1 * var(variables.$container-pad));
 }
 @media (min-width: 768px) {
   .bleed-inline {
-    margin-inline: calc(-1 * var(--container-pad-lg));
+    margin-inline: calc(-1 * var(variables.$container-pad-lg));
   }
 }
