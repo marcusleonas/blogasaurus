@@ -5,7 +5,7 @@
 
     <?php include_once('includes/page-hero.php'); ?>
 
-    <article class="page--content">
+    <article class="page-content">
         <div class="container">
             <?php the_content(); ?>
         </div>
