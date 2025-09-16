@@ -231,11 +231,11 @@ function blogasaurus_render_settings_page()
 
 // ---------- Remove Admin Bar ---------- //
 
-function blogasaurus_remove_admin_bar()
-{
-    show_admin_bar(false);
-}
-add_action('after_setup_theme', 'blogasaurus_remove_admin_bar');
+// function blogasaurus_remove_admin_bar()
+// {
+//     show_admin_bar(false);
+// }
+// add_action('after_setup_theme', 'blogasaurus_remove_admin_bar');
 
 // ---------- Custom Admin Styles ---------- //
 
